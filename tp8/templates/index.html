@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JUDUL</title>
+    <link
+      href="bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info px-3">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link text-white active"
+                aria-current="page"
+                href="index.php"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="matkul.php">Mata Kuliah</a>
+            </li>
+          </ul>
+          <span class="navbar-brand text-white mb-0"
+            ><strong>Daftar Dosen</strong></span
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid px-4">
+      <div class="row">
+        <!-- Kolom Kiri: Form Tambah / Edit Dosen -->
+        <div class="col-12 col-lg-4 my-4">
+          <div class="card p-4">
+            <h3 class="card-title mt-2 mb-3">FORM_TITLE</h3>
+            <form action="index.php" method="POST">
+              <input type="hidden" name="id" value="VAL_ID" />
+
+              <div class="mb-2">
+                <label for="name" class="form-label">Nama Dosen</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  value="VAL_NAME"
+                  required
+                />
+              </div>
+
+              <div class="mb-2">
+                <label for="nidn" class="form-label">NIDN</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nidn"
+                  name="nidn"
+                  value="VAL_NIDN"
+                  required
+                />
+              </div>
+
+              <div class="mb-2">
+                <label for="phone" class="form-label">Phone</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                  value="VAL_PHONE"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="join_date" class="form-label">Join Date</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="join_date"
+                  name="join_date"
+                  value="VAL_JOIN_DATE"
+                  required
+                />
+              </div>
+
+              <button type="submit" name="BTN_NAME" class="BTN_CLASS">
+                BTN_TEXT
+              </button>
+              BTN_CANCEL
+            </form>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Tabel Data Dosen -->
+        <div class="col-12 col-lg-8 my-4">
+          <h2 class="text-center mb-3">Tabel Dosen</h2>
+          <table class="table text-center align-middle">
+            <thead class="table-info">
+              <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>NIDN</th>
+                <th>Phone</th>
+                <th>Join Date</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              DATA_TABEL
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
