@@ -1,22 +1,24 @@
 <?php
 
+// Model Dosen untuk mengelola query CRUD pada tabel lecturers
 class Dosen extends DB
 {
+    // Mengambil seluruh data dosen dari tabel lecturers
     public function getDosen()
     {
-        $query = 'SELECT id, nama, NIDN, phone, join_date FROM lecturers';
-
+        $query = "SELECT id, nama, NIDN, phone, join_date FROM lecturers";
         return $this->execute($query);
     }
 
+    // Mengambil satu data dosen berdasarkan ID
     public function getDosenById($id)
     {
         $id = (int) $id;
         $query = "SELECT id, nama, NIDN, phone, join_date FROM lecturers WHERE id = $id";
-
         return $this->execute($query);
     }
 
+    // Menambahkan data dosen baru ke tabel lecturers
     public function add($data)
     {
         $nama = $this->escape($data['nama'] ?? '');
@@ -30,6 +32,7 @@ class Dosen extends DB
         return $this->execute($query);
     }
 
+    // Memperbarui data dosen berdasarkan ID
     public function update($data)
     {
         $id = (int) ($data['id'] ?? 0);
@@ -45,11 +48,11 @@ class Dosen extends DB
         return $this->execute($query);
     }
 
+    // Menghapus data dosen berdasarkan ID
     public function delete($id)
     {
         $id = (int) $id;
         $query = "DELETE FROM `lecturers` WHERE `id` = $id";
-
         return $this->execute($query);
     }
 }
