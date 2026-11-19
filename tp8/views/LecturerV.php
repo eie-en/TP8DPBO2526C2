@@ -9,6 +9,8 @@ class LecturerV
 
         foreach ($data as $val) {
             list($id, $name, $nidn, $phone, $join_date) = $val;
+
+            //menampilkan tiap baris data, kemudian tombol edit dan hapus, kemudian popup warning ketika ingin melakukan aksi hapus
             $dataLecturer .= "<tr class='text-center align-middle'>
                         <td>" . $no++ . "</td>
                         <td>" . $name . "</td>
