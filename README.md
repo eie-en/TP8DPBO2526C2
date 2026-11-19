@@ -19,5 +19,6 @@ Saya Aghni Lutvia Sari dengan NIM 2508921 mengerjakan TP8 dalam mata kuliah DPBO
 
 https://github.com/user-attachments/assets/b1ba4d80-3425-48af-9d7b-18227938c1b3
 
-
-
+<p align="center">
+  <✦•┈๑⋅⋯ ⋯⋅๑┈•✦>
+</p>
